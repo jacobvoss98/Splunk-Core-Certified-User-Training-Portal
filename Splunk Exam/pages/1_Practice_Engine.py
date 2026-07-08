@@ -47,7 +47,17 @@ if current_idx >= len(quiz_questions):
     quiz_logs = [h for h in st.session_state.history if h["quiz_id"] == selected_quiz]
     correct_run_count = sum(1 for h in quiz_logs if h["status"] == "Correct")
     total_run_count = len(quiz_questions)
+    # Calculate performance metrics for this specific window
+quiz_logs = [h for h in st.session_state.history if h["quiz_id"] == selected_quiz]
+correct_run_count = sum(1 for h in quiz_logs if h["status"] == "Correct")
+
+total_run_count = len(quiz_questions)
+
+# 💡 FIX: Prevent division by zero if the quiz questions list didn't load properly
+if total_run_count > 0:
     score_percentage = round((correct_run_count / total_run_count) * 100, 1)
+else:
+    score_percentage = 0.0
     
     # Log the complete attempt snapshot exactly ONCE per run
     if not st.session_state[state_quiz_saved_key]:
