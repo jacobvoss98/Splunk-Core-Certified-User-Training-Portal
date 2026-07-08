@@ -4,12 +4,25 @@ from datetime import datetime
 
 st.set_page_config(page_title="Practice Engine", page_icon="📊")
 
+import os
+
 @st.cache_data
 def load_questions():
     try:
-        with open("questions.json", "r", encoding="utf-8") as f:
+        # 1. Find the exact folder path where THIS script lives (Splunk Exam/pages/)
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        
+        # 2. Go up one level to the parent folder (Splunk Exam/)
+        parent_dir = os.path.dirname(current_dir)
+        
+        # 3. Create an absolute path directly to questions.json
+        json_path = os.path.join(parent_dir, "questions.json")
+        
+        with open(json_path, "r", encoding="utf-8") as f:
             return json.load(f)
-    except FileNotFoundError:
+    except Exception as e:
+        # This will print the exact error to your Streamlit logs if it fails
+        st.error(f"Error loading JSON: {e}")
         return []
 
 all_questions = load_questions()
