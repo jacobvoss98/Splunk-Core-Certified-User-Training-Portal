@@ -3,44 +3,50 @@ import pandas as pd
 
 st.set_page_config(page_title="Analytics Center", page_icon="📈", layout="wide")
 
-st.title("📊 Diagnostic Performance Analytics")
+st.title("📊 Quiz Performance History by Number")
 st.markdown("---")
 
-if "history" not in st.session_state or len(st.session_state.history) == 0:
-    st.warning("No performance data generated yet! Go complete some quiz questions first to see your metrics populate.")
+if "quiz_attempts" not in st.session_state or len(st.session_state.quiz_attempts) == 0:
+    st.warning("No finalized quiz attempts found! Complete all questions in any quiz to generate a timestamped attempt snapshot.")
 else:
-    df = pd.DataFrame(st.session_state.history)
+    # 1. Parse historical attempts structure straight into Pandas
+    attempts_df = pd.DataFrame(st.session_state.quiz_attempts)
     
-    # 1. High-Level Summary Metrics
-    total_answered = len(df)
-    correct_count = len(df[df["status"] == "Correct"])
-    accuracy_rate = (correct_count / total_answered) * 100
+    # 2. Add Quiz Filtering Sidebar Options
+    st.sidebar.title("Filter Options")
+    unique_quizzes = sorted(list(attempts_df["Quiz ID"].unique()))
+    filter_option = st.sidebar.selectbox("Select View:", ["All Quizzes"] + unique_quizzes)
     
-    m1, m2, m3 = st.columns(3)
-    m1.metric("Total Answers Logged", f"{total_answered}")
-    m2.metric("Total Correct Solutions", f"{correct_count}")
-    m3.metric("Global Accuracy", f"{round(accuracy_rate, 1)}%")
+    # Filter dataframe based on user choice
+    if filter_option == "All Quizzes":
+        display_df = attempts_df
+        st.subheader("📈 Global Accuracy Progression Timeline")
+    else:
+        display_df = attempts_df[attempts_df["Quiz ID"] == filter_option]
+        st.subheader(f"📈 Accuracy Progression Timeline for {filter_option}")
+
+    # 3. High-Level Metrics Cards for Selected View
+    total_runs = len(display_df)
+    avg_accuracy = display_df["Accuracy (%)"].mean()
+    
+    c1, c2 = st.columns(2)
+    c1.metric(f"Total Completed Runs ({filter_option})", f"{total_runs}")
+    c2.metric(f"Average Accuracy ({filter_option})", f"{round(avg_accuracy, 1)}%")
     
     st.markdown("---")
     
-    # 2. Group Metrics Separated by Quiz 1-11
-    st.subheader("Quiz-by-Quiz Performance Analysis")
+    # 4. Timeline Progress Visualization for Selected Quiz
+    chart_data = display_df.copy()
+    chart_data["Attempt Number"] = range(1, len(chart_data) + 1)
+    chart_data = chart_data.set_index("Attempt Number")
     
-    # Grouping logic to build scorecard map per Quiz ID
-    quiz_summary = df.groupby("quiz_id").agg(
-        Total_Attempted=("status", "count"),
-        Correct_Answers=("status", lambda x: (x == "Correct").sum())
-    ).reset_index()
+    st.line_chart(data=chart_data["Accuracy (%)"], use_container_width=True)
     
-    quiz_summary["Accuracy %"] = round((quiz_summary["Correct_Answers"] / quiz_summary["Total_Attempted"]) * 100, 1)
-    quiz_summary.columns = ["Quiz ID", "Total Questions Tried", "Correct Answers", "Accuracy Score (%)"]
+    st.markdown("---")
     
-    # Set index for cleaner native charting
-    chart_df = quiz_summary.set_index("Quiz ID")
+    # 5. Timestamped Historic Log Table for Selected Quiz
+    st.subheader(f"🗃️ Timestamped Registry: {filter_option}")
+    st.markdown("Attempts are shown in chronological order (newest at the top):")
     
-    # Render an interactive comparative breakdown graph
-    st.bar_chart(chart_df["Accuracy Score (%)"])
-    
-    # Display the clean formatted data summary matrix underneath
-    st.subheader("Quiz Report Card Matrix")
-    st.dataframe(quiz_summary, hide_index=True, use_container_width=True)
+    # Display table in descending order so newest runs sit right at the top
+    st.dataframe(display_df.iloc[::-1], hide_index=True, use_container_width=True)
