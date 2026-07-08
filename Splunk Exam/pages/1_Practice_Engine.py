@@ -14,7 +14,7 @@ def load_questions():
 
 all_questions = load_questions()
 
-# Core tracking structures
+# Setup global tracking arrays
 if "history" not in st.session_state: 
     st.session_state.history = []
 if "quiz_attempts" not in st.session_state:
@@ -22,14 +22,17 @@ if "quiz_attempts" not in st.session_state:
 
 st.title("Exam Practice Engine 📝")
 
+# Safety Check: If JSON failed to load, break gracefully instead of crashing math variables
 if not all_questions:
-    st.error("⚠️ No questions found. Please check that 'questions.json' is in the 'Splunk Exam' folder.")
+    st.error("⚠️ The database is currently empty. Please ensure 'questions.json' is located inside the 'Splunk Exam' subfolder on GitHub.")
 else:
+    # 1. Active Quiz Segmentation Workspace
     quiz_list = sorted(list(set([q["quiz_id"] for q in all_questions])))
     selected_quiz = st.selectbox("Select a Quiz to Start:", quiz_list, format_func=lambda x: f"Quiz {x} ({'20 Qs' if x < 11 else '12 Qs'})")
 
     quiz_questions = [q for q in all_questions if q["quiz_id"] == selected_quiz]
 
+    # Initialize separate state flags dynamically matching selection number
     state_idx_key = f"idx_quiz_{selected_quiz}"
     state_submitted_key = f"sub_quiz_{selected_quiz}"
     state_ans_key = f"ans_quiz_{selected_quiz}"
@@ -42,7 +45,7 @@ else:
 
     current_idx = st.session_state[state_idx_key]
 
-    # Quiz Complete State
+    # View Option A: The Current Quiz Segment is Complete
     if current_idx >= len(quiz_questions):
         st.success(f"🎉 Quiz {selected_quiz} Complete!")
         
@@ -50,11 +53,10 @@ else:
         correct_run_count = sum(1 for h in quiz_logs if h["status"] == "Correct")
         total_run_count = len(quiz_questions)
         
-        if total_run_count > 0:
-            score_percentage = round((correct_run_count / total_run_count) * 100, 1)
-        else:
-            score_percentage = 0.0
+        # Zero-safe dynamic error prevention check
+        score_percentage = round((correct_run_count / total_run_count) * 100, 1) if total_run_count > 0 else 0.0
         
+        # Save attempt timestamp to metric registry array exactly once
         if not st.session_state[state_quiz_saved_key]:
             st.session_state.quiz_attempts.append({
                 "Timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
@@ -73,6 +75,8 @@ else:
             st.session_state[state_quiz_saved_key] = False
             st.session_state.history = [h for h in st.session_state.history if h["quiz_id"] != selected_quiz]
             st.rerun()
+
+    # View Option B: Quiz Questions are Active
     else:
         current_q = quiz_questions[current_idx]
         st.markdown(f"**Question {current_idx + 1} of {len(quiz_questions)}**")
