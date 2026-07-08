@@ -1,0 +1,1486 @@
+[
+  {
+    "id": 1,
+    "quiz_id": 1,
+    "question": "Which search string only returns events from hostWWW3?",
+    "options": ["A. host=*", "B. host=WWW3", "C. host=WWW*", "D. Host=WWW3"],
+    "correct": "B"
+  },
+  {
+    "id": 2,
+    "quiz_id": 1,
+    "question": "By default, how long does Splunk retain a search job?",
+    "options": ["A. 10 Minutes", "B. 15 Minutes", "C. 1 Day", "D. 7 Days"],
+    "correct": "A"
+  },
+  {
+    "id": 3,
+    "quiz_id": 1,
+    "question": "What must be done before an automatic lookup can be created? (Choose all that apply.)",
+    "options": ["A. The lookup command must be used.", "B. The lookup definition must be created.", "C. The lookup file must be uploaded to Splunk.", "D. The lookup file must be verified using the inputlookup command."],
+    "correct": "B"
+  },
+  {
+    "id": 4,
+    "quiz_id": 1,
+    "question": "Which of the following Splunk components typically resides on the machines where data originates?",
+    "options": ["A. Indexer", "B. Forwarder", "C. Search head", "D. Deployment server"],
+    "correct": "B"
+  },
+  {
+    "id": 5,
+    "quiz_id": 1,
+    "question": "What determines the scope of data that appears in a scheduled report?",
+    "options": ["A. All data accessible to the User role will appear in the report.", "B. All data accessible to the owner of the report will appear in the report.", "C. All data accessible to all users will appear in the report until the next time the report is run.", "D. The owner of the report can configure permissions so that the report uses either the User role or the owner's profile at run time."],
+    "correct": "B"
+  },
+  {
+    "id": 6,
+    "quiz_id": 1,
+    "question": "When writing searches in Splunk, which of the following is true about Booleans?",
+    "options": ["A. They must be lowercase.", "B. They must be uppercase.", "C. They must be in quotations.", "D. They must be in parentheses."],
+    "correct": "B"
+  },
+  {
+    "id": 7,
+    "quiz_id": 1,
+    "question": "Which of the following searches would return events with failure in index netfw or warn or critical in index netops?",
+    "options": ["A. (index netfw failure) AND index=netops warn OR critical", "B. (index netfw failure) OR (index=netops (warn OR critical))", "C. (index netfw failure) AND (index=netops (warn OR critical))", "D. (index netfw failure) OR index=netops OR (warn OR critical)"],
+    "correct": "B"
+  },
+  {
+    "id": 8,
+    "quiz_id": 1,
+    "question": "Select the answer that displays the accurate placing of the pipe in the following search string: index security sourcetype-access_* status = 200 stats count by price",
+    "options": ["A. index security sourcetype=access_* status = 200 stats | count by price", "B. index security sourcetype access_* status = 200 | stats count by price", "C. index security sourcetype access_* status=200 | stats count | by price", "D. index security sourcetype access_* | status = 200 stats count by price"],
+    "correct": "B"
+  },
+  {
+    "id": 9,
+    "quiz_id": 1,
+    "question": "Which of the following constraints can be used with the top command?",
+    "options": ["A. limit", "B. useperc", "C. addtotals", "D. fieldcount"],
+    "correct": "A"
+  },
+  {
+    "id": 10,
+    "quiz_id": 1,
+    "question": "When editing a dashboard, which of the following are possible options? (Choose all that apply.)",
+    "options": ["A. Add an output.", "B. Export a dashboard panel.", "C. Modify the chart type displayed in a dashboard panel.", "D. Drag a dashboard panel to a different location on the dashboard."],
+    "correct": "C"
+  },
+  {
+    "id": 11,
+    "quiz_id": 1,
+    "question": "When running searches, command modifiers in the search string are displayed in what color?",
+    "options": ["A. Red", "B. Blue", "C. Orange", "D. Highlighted"],
+    "correct": "C"
+  },
+  {
+    "id": 12,
+    "quiz_id": 1,
+    "question": "Which of the following represents the Splunk recommended naming convention for dashboards?",
+    "options": ["A. Description_Group_Object", "B. Group Description_Object", "C. Group_Object_Description", "D. Object Group_Description"],
+    "correct": "C"
+  },
+  {
+    "id": 13,
+    "quiz_id": 1,
+    "question": "How can search results be kept longer than 7 days?",
+    "options": ["A. By scheduling a report.", "B. By creating a link to the job.", "C. By changing the job settings.", "D. By changing the time range picker to more than 7 days."],
+    "correct": "A"
+  },
+  {
+    "id": 14,
+    "quiz_id": 1,
+    "question": "Which of the following is a Splunk search best practice?",
+    "options": ["A. Filter as early as possible.", "B. Never specify more than one index.", "C. Include as few search terms as possible.", "D. Use wildcards to return more search results."],
+    "correct": "A"
+  },
+  {
+    "id": 15,
+    "quiz_id": 1,
+    "question": "When looking at a dashboard panel that is based on a report, which of the following is true?",
+    "options": ["A. You can modify the search string in the panel, and you can change and configure the visualization.", "B. You can modify the search string in the panel, but you cannot change and configure the visualization.", "C. You cannot modify the search string in the panel, but you can change and configure the visualization.", "D. You cannot modify the search string in the panel, and you cannot change and configure the visualization."],
+    "correct": "C"
+  },
+  {
+    "id": 16,
+    "quiz_id": 1,
+    "question": "Which of the following are common constraints of the top command?",
+    "options": ["A. limit, count", "B. limit, showpercent", "C. limits, countfield", "D. showperc, countfield"],
+    "correct": "D"
+  },
+  {
+    "id": 17,
+    "quiz_id": 1,
+    "question": "When displaying results of a search, which of the following is true about line charts?",
+    "options": ["A. Line charts are optimal for single and multiple series.", "B. Line charts are optimal for single series when using Fast mode.", "C. Line charts are optimal for multiple series with 3 or more columns.", "D. Line charts are optimal for multiseries searches with at least 2 or more columns."],
+    "correct": "A"
+  },
+  {
+    "id": 18,
+    "quiz_id": 1,
+    "question": "How are events displayed after a search is executed?",
+    "options": ["A. In chronological order.", "B. Randomly by default.", "C. In reverse chronological order.", "D. Alphabetically according to field name."],
+    "correct": "C"
+  },
+  {
+    "id": 19,
+    "quiz_id": 1,
+    "question": "Which of the following is true about user account settings and preferences?",
+    "options": ["A. Search & Reporting is the only app that can be set as the default application.", "B. Full names can only be changed by accounts with a Power User or Admin role.", "C. Time zones are automatically updated based on the setting of the computer accessing Splunk.", "D. Full name, time zone, and default app can be defined by clicking the login name in the Splunk bar."],
+    "correct": "D"
+  },
+  {
+    "id": 20,
+    "quiz_id": 1,
+    "question": "What is a primary function of a scheduled report?",
+    "options": ["A. Auto-detect changes in performance.", "B. Auto-generated PDF reports of overall data trends.", "C. Regularly scheduled archiving to keep disk space use low.", "D. Triggering an alert in your Splunk instance when certain conditions are met."],
+    "correct": "D"
+  },
+  {
+    "id": 21,
+    "quiz_id": 2,
+    "question": "After running a search, what effect does clicking and dragging across the timeline have?",
+    "options": ["A. Executes a new search.", "B. Filters current search results.", "C. Moves to past or future events.", "D. Expands the time range of the search."],
+    "correct": "B"
+  },
+  {
+    "id": 22,
+    "quiz_id": 2,
+    "question": "Which command is used to review the contents of a specified static lookup file?",
+    "options": ["A. lookup", "B. csvlookup", "C. inputlookup", "D. outputlookup"],
+    "correct": "C"
+  },
+  {
+    "id": 23,
+    "quiz_id": 2,
+    "question": "What must be done in order to use a lookup table in Splunk?",
+    "options": ["A. The lookup must be configured to run automatically.", "B. The contents of the lookup file must be copied and pasted into the search bar.", "C. The lookup file must be uploaded to Splunk and a lookup definition must be created.", "D. The lookup file must be uploaded to the etc/apps/lookups folder for automatic ingestion."],
+    "correct": "C"
+  },
+  {
+    "id": 24,
+    "quiz_id": 2,
+    "question": "When sorting on multiple fields with the sort command, what delimiter can be used between the field names in the search?",
+    "options": ["A. ,", "B. $", "C. !", "D. ."],
+    "correct": "D"
+  },
+  {
+    "id": 25,
+    "quiz_id": 2,
+    "question": "Which time range picker configuration would return real-time events for the past 30 seconds?",
+    "options": ["A. Preset - Relative: 30-seconds ago", "B. Relative - Earliest: 30-seconds ago, Latest: Now", "C. Real-time - Earliest: 30-seconds ago, Latest: Now", "D. Advanced - Earliest: 30-seconds ago, Latest: Now"],
+    "correct": "C"
+  },
+  {
+    "id": 26,
+    "quiz_id": 2,
+    "question": "What is the correct syntax to count the number of events containing a vendor_action field?",
+    "options": ["A. count stats vendor_action", "B. count stats (vendor_action)", "C. stats count (vendor_action)", "D. stats vendor_action (count)"],
+    "correct": "C"
+  },
+  {
+    "id": 27,
+    "quiz_id": 2,
+    "question": "What is one benefit of creating dashboard panels from reports?",
+    "options": ["A. Any newly created dashboard will include that report.", "B. There are no benefits to creating dashboard panels from reports.", "C. It makes the dashboard more efficient because it only has to run one search string.", "D. Any change to the underlying report will affect every dashboard that utilizes that report."],
+    "correct": "D"
+  },
+  {
+    "id": 28,
+    "quiz_id": 2,
+    "question": "By default, which of the following fields would be listed in the fields sidebar under Interesting Fields?",
+    "options": ["A. host", "B. index", "C. source", "D. sourcetype"],
+    "correct": "B"
+  },
+  {
+    "id": 29,
+    "quiz_id": 2,
+    "question": "Which of the following statements about case sensitivity is true?",
+    "options": ["A. Both field names and field values ARE case sensitive.", "B. Field names ARE case sensitive; field values are NOT.", "C. Field values ARE case sensitive; field names ARE NOT.", "D. Both field names and field values ARE NOT case sensitive."],
+    "correct": "B"
+  },
+  {
+    "id": 30,
+    "quiz_id": 2,
+    "question": "What does the rare command do?",
+    "options": ["A. Returns the least common field values of a given field in the results.", "B. Returns the most common field values of a given field in the results.", "C. Returns the top 10 field values of a given field in the results.", "D. Returns the lowest 10 field values of a given field in the results."],
+    "correct": "A"
+  },
+  {
+    "id": 31,
+    "quiz_id": 2,
+    "question": "When an alert action is configured to run a script, Splunk must be able to locate the script. Which is one of the directories Splunk will look in to find the script?",
+    "options": ["A. $SPLUNK_HOME/bin/scripts", "B. $SPLUNK_HOME/etc/scripts", "C. $SPLUNK_HOME/bin/etc/scripts", "D. $SPLUNK_HOME/etc/scripts/bin"],
+    "correct": "A"
+  },
+  {
+    "id": 32,
+    "quiz_id": 2,
+    "question": "Which Boolean operator is always implied between two search terms, unless otherwise specified?",
+    "options": ["A. OR", "B. NOT", "C. AND", "D. XOR"],
+    "correct": "C"
+  },
+  {
+    "id": 33,
+    "quiz_id": 2,
+    "question": "What does the values function of the stats command do?",
+    "options": ["A. Lists all values of a given field.", "B. Lists unique values of a given field.", "C. Returns a count of unique values for a given field.", "D. Returns the number of events that match the search."],
+    "correct": "B"
+  },
+  {
+    "id": 34,
+    "quiz_id": 2,
+    "question": "Which stats command function provides a count of how many unique values exist for a given field in the result set?",
+    "options": ["A. dc(field)", "B. count(field)", "C. count-by(field)", "D. distinct-count(field)"],
+    "correct": "A"
+  },
+  {
+    "id": 35,
+    "quiz_id": 2,
+    "question": "A collection of items containing things such as data inputs, UI elements, and knowledge objects is known as what?",
+    "options": ["A. An app", "B. JSON", "C. A role", "D. An enhanced solution"],
+    "correct": "A"
+  },
+  {
+    "id": 36,
+    "quiz_id": 2,
+    "question": "Which statement is true about Splunk alerts?",
+    "options": ["A. Alerts are based on searches that are either run on a scheduled interval or in real-time.", "B. Alerts are based on searches and when triggered will only send an email notification.", "C. Alerts are based on searches and require cron to run on scheduled interval.", "D. Alerts are based on searches that are run exclusively as real-time."],
+    "correct": "A"
+  },
+  {
+    "id": 37,
+    "quiz_id": 2,
+    "question": "What is the purpose of using a by clause with the stats command?",
+    "options": ["A. To group the results by one or more fields.", "B. To compute numerical statistics on each field.", "C. To specify how the values in a list are delimited.", "D. To partition the input data based on the split-by fields."],
+    "correct": "A"
+  },
+  {
+    "id": 38,
+    "quiz_id": 2,
+    "question": "How do you add or remove fields from search results?",
+    "options": ["A. Use field + to add and field - to remove.", "B. Use table + to add and table - to remove.", "C. Use fields + to add and fields - to remove.", "D. Use fields Plus to add and fields Minus to remove."],
+    "correct": "C"
+  },
+  {
+    "id": 39,
+    "quiz_id": 2,
+    "question": "A field exists in search results, but isn't being displayed in the fields sidebar. How can it be added to the fields sidebar?",
+    "options": ["A. Click All Fields and select the field to add it to Selected Fields.", "B. Click Interesting Fields and select the field to add it to Selected Fields.", "C. Click Selected Fields and select the field to add it to Interesting Fields.", "D. This scenario isn't possible because all fields returned from a search always appear in the fields sidebar."],
+    "correct": "A"
+  },
+  {
+    "id": 40,
+    "quiz_id": 2,
+    "question": "In the fields sidebar, which character denotes alphanumeric field values?",
+    "options": ["A. #", "B. %", "C. a", "D. a#"],
+    "correct": "C"
+  },
+  {
+    "id": 41,
+    "quiz_id": 3,
+    "question": "What is the main requirement for creating visualizations using the Splunk UI?",
+    "options": ["A. Your search must transform event data into Excel file format first.", "B. Your search must transform event data into XML formatted data first.", "C. Your search must transform event data into statistical data tables first.", "D. Your search must transform event data into JSON formatted data first."],
+    "correct": "C"
+  },
+  {
+    "id": 42,
+    "quiz_id": 3,
+    "question": "What syntax is used to link key/value pairs in search strings?",
+    "options": ["A. action+purchase", "B. action=purchase", "C. action | purchase", "D. action equal purchase"],
+    "correct": "B"
+  },
+  {
+    "id": 43,
+    "quiz_id": 3,
+    "question": "What user interface component allows for time selection?",
+    "options": ["A. Time summary", "B. Time range picker", "C. Search time picker", "D. Data source time statistics"],
+    "correct": "B"
+  },
+  {
+    "id": 44,
+    "quiz_id": 3,
+    "question": "Which of the following searches will return results where fail, 400, and error exist in every event?",
+    "options": ["A. error AND (fail AND 400)", "B. error OR (fail and 400)", "C. error AND (fail OR 400)", "D. error OR fail OR 400"],
+    "correct": "A"
+  },
+  {
+    "id": 45,
+    "quiz_id": 3,
+    "question": "When placed early in a search, which command is most effective at reducing search execution time?",
+    "options": ["A. dedup", "B. rename", "C. sort -", "D. fields +"],
+    "correct": "D"
+  },
+  {
+    "id": 46,
+    "quiz_id": 3,
+    "question": "Which of the following is the most efficient filter for running searches in Splunk?",
+    "options": ["A. Time", "B. Fast mode", "C. Sourcetype", "D. Selected Fields"],
+    "correct": "A"
+  },
+  {
+    "id": 47,
+    "quiz_id": 3,
+    "question": "How does Splunk determine which fields to extract from data?",
+    "options": ["A. Splunk only extracts the most interesting data from the last 24 hours.", "B. Splunk only extracts fields users have manually specified in their data.", "C. Splunk automatically extracts any fields that generate interesting visualizations.", "D. Splunk automatically discovers many fields based on sourcetype and key/value pairs found in the data."],
+    "correct": "D"
+  },
+  {
+    "id": 48,
+    "quiz_id": 3,
+    "question": "Which of the following file types is an option for exporting Splunk search results?",
+    "options": ["A. PDF", "B. JSON", "C. XLS", "D. RTF"],
+    "correct": "B"
+  },
+  {
+    "id": 49,
+    "quiz_id": 3,
+    "question": "What syntax is used to link key/value pairs in search strings?",
+    "options": ["A. Parentheses", "B. @ or # symbols", "C. Quotation marks", "D. Relational operators such as =, <, <= or >"],
+    "correct": "D"
+  },
+  {
+    "id": 50,
+    "quiz_id": 3,
+    "question": "Which search string returns a field containing the number of matching events and names that field Event Count?",
+    "options": ["A. index security failure | stats sum as Event Count", "B. index security failure | stats count as \"Event Count\"", "C. index security failure | stats count by Event Count", "D. index security failure | stats dc(count) as Event Count"],
+    "correct": "B"
+  },
+  {
+    "id": 51,
+    "quiz_id": 3,
+    "question": "Which search would return events from the access_combined sourcetype?",
+    "options": ["A. Sourcetype=access_combined", "B. Sourcetype=Access_Combined", "C. sourcetype=access_combined", "D. SOURCETYPE=access_combined"],
+    "correct": "C"
+  },
+  {
+    "id": 52,
+    "quiz_id": 3,
+    "question": "Which of the following index searches would provide the most efficient search performance?",
+    "options": ["A. index=*", "B. index web OR index=s*", "C. (index=web OR index=sales)", "D. *index sales AND index web*"],
+    "correct": "C"
+  },
+  {
+    "id": 53,
+    "quiz_id": 3,
+    "question": "What is a suggested Splunk best practice for naming reports?",
+    "options": ["A. Reports are best named using many numbers so they can be more easily sorted.", "B. Use a consistent naming convention so they are easily separated by characteristics such as group and object.", "C. Name reports as uniquely as possible with no overlap to differentiate them from one another.", "D. Any naming convention is fine as long as you keep an external spreadsheet to keep track."],
+    "correct": "B"
+  },
+  {
+    "id": 54,
+    "quiz_id": 3,
+    "question": "In a deployment with multiple indexes, what will happen when a search is run and an index is not specified in the search string?",
+    "options": ["A. No events will be returned.", "B. Splunk will prompt you to specify an index.", "C. All non-indexed events to which the user has access will be returned.", "D. Events from every index searched by default to which the user has access will be returned."],
+    "correct": "D"
+  },
+  {
+    "id": 55,
+    "quiz_id": 3,
+    "question": "In the Splunk interface, what is one way to drill down from a statistics table to see the underlying events?",
+    "options": ["A. Creating a pivot table.", "B. Clicking on the visualizations tab.", "C. Viewing your report in a dashboard.", "D. Clicking on any field value in the table."],
+    "correct": "D"
+  },
+  {
+    "id": 56,
+    "quiz_id": 3,
+    "question": "In the Splunk interface, the list of alerts can be filtered based on which characteristics?",
+    "options": ["A. App, Owner, Severity, and Type", "B. App, Owner, Priority, and Status", "C. App, Dashboard, Severity, and Type", "D. App, Time Window, Type, and Severity"],
+    "correct": "A"
+  },
+  {
+    "id": 57,
+    "quiz_id": 3,
+    "question": "What are the steps to schedule a report?",
+    "options": ["A. After saving the report, click Schedule.", "B. After saving the report, click Event Type.", "C. After saving the report, click Scheduling.", "D. After saving the report, click Dashboard Panel."],
+    "correct": "A"
+  },
+  {
+    "id": 58,
+    "quiz_id": 3,
+    "question": "In the fields sidebar, what indicates that a field is numeric?",
+    "options": ["A. A number to the right of the field name.", "B. A # symbol to the left of the field name.", "C. A lowercase n to the left of the field name.", "D. A lowercase n to the right of the field name."],
+    "correct": "B"
+  },
+  {
+    "id": 59,
+    "quiz_id": 3,
+    "question": "Which of the following are functions of the stats command?",
+    "options": ["A. count, sum, add", "B. count, sum, less", "C. sum, avg, values", "D. sum, values, table"],
+    "correct": "C"
+  },
+  {
+    "id": 60,
+    "quiz_id": 3,
+    "question": "At index time, in which field does Splunk store the timestamp value?",
+    "options": ["A. time", "B. _time", "C. EventTime", "D. timestamp"],
+    "correct": "B"
+  },
+  {
+    "id": 61,
+    "quiz_id": 4,
+    "question": "Which of the following is a best practice when writing a search string?",
+    "options": ["A. Include all formatting commands before any search terms.", "B. Include at least one function as this is a search requirement.", "C. Include the search terms at the beginning of the search string.", "D. Avoid using formatting clauses, as they add too much overhead."],
+    "correct": "C"
+  },
+  {
+    "id": 62,
+    "quiz_id": 4,
+    "question": "What type of search can be saved as a report?",
+    "options": ["A. Any search can be saved as a report.", "B. Only searches that generate visualizations.", "C. Only searches containing a transforming command.", "D. Only searches that generate statistics or visualizations."],
+    "correct": "A"
+  },
+  {
+    "id": 63,
+    "quiz_id": 4,
+    "question": "What can be included in the All Fields option in the sidebar?",
+    "options": ["A. Dashboards", "B. Metadata only", "C. Non-interesting fields", "D. Field descriptions"],
+    "correct": "C"
+  },
+  {
+    "id": 64,
+    "quiz_id": 4,
+    "question": "When viewing the results of a search, what is an Interesting Field?",
+    "options": ["A. A field that appears in any event.", "B. A field that appears in every event.", "C. A field that appears in the top 10 events.", "D. A field that appears in at least 20% of the events."],
+    "correct": "D"
+  },
+  {
+    "id": 65,
+    "quiz_id": 4,
+    "question": "When a Splunk search generates calculated data that appears in the Statistics tab, in what formats can the results be exported?",
+    "options": ["A. CSV, JSON, PDF", "B. CSV, XML, JSON", "C. Raw Events, XML, JSON", "D. Raw Events, CSV, XML, JSON"],
+    "correct": "B"
+  },
+  {
+    "id": 66,
+    "quiz_id": 4,
+    "question": "Which search matches the events containing the terms 'error' and 'fail'?",
+    "options": ["A. index=security error fail", "B. index=security error OR fail", "C. index=security error failure", "D. index=security NOT error NOT fail"],
+    "correct": "A"
+  },
+  {
+    "id": 67,
+    "quiz_id": 4,
+    "question": "Which of the following is an option after clicking an item in search results?",
+    "options": ["A. Saving the item to a report.", "B. Adding the item to the search.", "C. Adding the item to a dashboard.", "D. Saving the Search to a JSON file."],
+    "correct": "B"
+  },
+  {
+    "id": 68,
+    "quiz_id": 4,
+    "question": "Which of the following fields is stored with the events in the index?",
+    "options": ["A. user", "B. source", "C. location", "D. sourceIP"],
+    "correct": "B"
+  },
+  {
+    "id": 69,
+    "quiz_id": 4,
+    "question": "Which of the following is the recommended way to create multiple dashboards displaying data from the same search?",
+    "options": ["A. Save the search as a report and use it in multiple dashboards as needed.", "B. Save the search as a dashboard panel for each dashboard that needs the data.", "C. Save the search as a scheduled alert and use it in multiple dashboards as needed.", "D. Export the results of the search to an XML file and use the file as the basis of the dashboards."],
+    "correct": "A"
+  },
+  {
+    "id": 70,
+    "quiz_id": 4,
+    "question": "What does the following specified time range do? earliest=-72h@h latest=@d",
+    "options": ["A. Look back 3 days ago and prior.", "B. Look back 72 hours, up to one day ago.", "C. Look back 72 hours, up to the end of today.", "D. Look back from 3 days ago, up to the beginning of today."],
+    "correct": "D"
+  },
+  {
+    "id": 71,
+    "quiz_id": 4,
+    "question": "Which events will be returned by the following search string? host=www3 status=503",
+    "options": ["A. All events that either have a host of www3 or a status of 503.", "B. All events with a host of www3 that also have a status of 503.", "C. We need more information; we cannot tell without knowing the time range.", "D. We need more information; a search cannot be run without specifying an index."],
+    "correct": "B"
+  },
+  {
+    "id": 72,
+    "quiz_id": 4,
+    "question": "What does the stats command do?",
+    "options": ["A. Automatically correlates related fields.", "B. Converts field values into numerical values.", "C. Calculates statistics on data that matches the search criteria.", "D. Analyzes numerical fields for their ability to predict another discrete field."],
+    "correct": "C"
+  },
+  {
+    "id": 73,
+    "quiz_id": 4,
+    "question": "Which is a primary function of the timeline located under the search bar?",
+    "options": ["A. To differentiate between structured and unstructured events in the data.", "B. To sort the events returned by the search command in chronological order.", "C. To zoom in and zoom out, although this does not change the scale of the chart.", "D. To show peaks and/or valleys in the timeline, which can indicate spikes in activity or downtime."],
+    "correct": "D"
+  },
+  {
+    "id": 74,
+    "quiz_id": 4,
+    "question": "What can be configured using the Edit Job Settings menu?",
+    "options": ["A. Export the result to CSV format.", "B. Add the Job results to a dashboard.", "C. Schedule the Job to re-run in 10 minutes.", "D. Change Job Lifetime from 10 minutes to 7 days."],
+    "correct": "D"
+  },
+  {
+    "id": 75,
+    "quiz_id": 4,
+    "question": "Which command is used to validate a lookup file?",
+    "options": ["A. [lookup products.csv", "B. inputlookup products.csv", "C. | inputlookup products.csv", "D. | lookup_definition products.csv"],
+    "correct": "C"
+  },
+  {
+    "id": 76,
+    "quiz_id": 4,
+    "question": "Which statement is true about the top command?",
+    "options": ["A. It returns the top 10 results.", "B. It displays the output in table format.", "C. It returns the count and percent columns per row.", "D. All of the above."],
+    "correct": "D"
+  },
+  {
+    "id": 77,
+    "quiz_id": 4,
+    "question": "How can another user gain access to a saved report?",
+    "options": ["A. The owner of the report can edit permissions from the Edit dropdown.", "B. Only users with an Admin or Power User role can access other users' reports.", "C. Anyone can access any reports marked as public within a shared Splunk deployment.", "D. The owner of the report must clone the original report and save it to their user account."],
+    "correct": "A"
+  },
+  {
+    "id": 78,
+    "quiz_id": 4,
+    "question": "What is the primary use for the rare command?",
+    "options": ["A. To sort field values in descending order.", "B. To return only fields containing five or fewer values.", "C. To find the least common values of a field in a dataset.", "D. To find the fields with the fewest number of values across a dataset."],
+    "correct": "C"
+  },
+  {
+    "id": 79,
+    "quiz_id": 4,
+    "question": "What happens when a field is added to the Selected Fields list in the fields sidebar?",
+    "options": ["A. Splunk will re-run the search job in Verbose Mode to prioritize the new Selected Field.", "B. Splunk will highlight related fields as a suggestion to add them to the Selected Fields list.", "C. Custom selections will replace the Interesting Fields that Splunk populated into the list at search time.", "D. The selected field and its corresponding values will appear underneath the events in the search results."],
+    "correct": "D"
+  },
+  {
+    "id": 80,
+    "quiz_id": 4,
+    "question": "By default, which of the following is a Selected Field?",
+    "options": ["A. action", "B. clientip", "C. categoryid", "D. sourcetype"],
+    "correct": "D"
+  },
+  {
+    "id": 81,
+    "quiz_id": 5,
+    "question": "According to Splunk best practices, which placement of the wildcard results in the most efficient search?",
+    "options": ["A. fail*", "B. *fail", "C. fail*", "D. *fail*"],
+    "correct": "C"
+  },
+  {
+    "id": 82,
+    "quiz_id": 5,
+    "question": "Which command automatically returns percent and count columns when executing searches?",
+    "options": ["A. top", "B. stats", "C. table", "D. percent"],
+    "correct": "A"
+  },
+  {
+    "id": 83,
+    "quiz_id": 5,
+    "question": "Which of the following describes lookup files?",
+    "options": ["A. Lookup fields cannot be used in searches.", "B. Lookups contain static data available in the index.", "C. Lookups add more fields to results returned by a search.", "D. Lookups pull data at index time and add them to search results."],
+    "correct": "C"
+  },
+  {
+    "id": 84,
+    "quiz_id": 5,
+    "question": "Which search string is the most efficient?",
+    "options": ["A. \"failed password\"", "B. \"failed password\"*", "C. index=* failed password", "D. index=security \"failed password\""],
+    "correct": "D"
+  },
+  {
+    "id": 85,
+    "quiz_id": 5,
+    "question": "Which search string matches only events with the status_code of 404?",
+    "options": ["A. status_code!=404", "B. status_code>=400", "C. status_code<=404", "D. status_code>403 status_code<405"],
+    "correct": "D"
+  },
+  {
+    "id": 86,
+    "quiz_id": 5,
+    "question": "________ transforms raw data into events and distributes the results into an index.",
+    "options": ["A. Index", "B. Search Head", "C. Indexer", "D. Forwarder"],
+    "correct": "C"
+  },
+  {
+    "id": 87,
+    "quiz_id": 5,
+    "question": "Documentations for Splunk can be found at docs.splunk.com",
+    "options": ["A. True", "B. False"],
+    "correct": "A"
+  },
+  {
+    "id": 88,
+    "quiz_id": 5,
+    "question": "Which component of Splunk is primarily responsible for saving data?",
+    "options": ["A. Search Head", "B. Heavy Forwarder", "C. Indexer", "D. Universal Forwarder"],
+    "correct": "C"
+  },
+  {
+    "id": 89,
+    "quiz_id": 5,
+    "question": "Universal forwarder is recommended for forwarding the logs to indexers.",
+    "options": ["A. False", "B. True"],
+    "correct": "B"
+  },
+  {
+    "id": 90,
+    "quiz_id": 5,
+    "question": "Splunk apps are used for following (Choose three.):",
+    "options": ["A. Designed to cater numerous use cases and empower Splunk.", "B. We can not install Splunk App.", "C. Allows multiple workspaces for different use cases/user roles.", "D. It is collection of different Splunk config files like data inputs, UI and Knowledge Object."],
+    "correct": "ACD"
+  },
+  {
+    "id": 91,
+    "quiz_id": 5,
+    "question": "Three basic components of Splunk are (Choose three.):",
+    "options": ["A. Forwarders", "B. Deployment Server", "C. Indexer", "D. Knowledge Objects", "E. Index", "F. Search Head"],
+    "correct": "ACF"
+  },
+  {
+    "id": 92,
+    "quiz_id": 5,
+    "question": "What is Splunk?",
+    "options": ["A. Splunk is a software platform to search, analyze and visualize the machine-generated data.", "B. Database management tool.", "C. Security Information and Event Management (SIEM).", "D. Cloud based application that help in analyzing logs."],
+    "correct": "A"
+  },
+  {
+    "id": 93,
+    "quiz_id": 5,
+    "question": "We should use heavy forwarder for sending event-based data to Indexers.",
+    "options": ["A. False", "B. True"],
+    "correct": "B"
+  },
+  {
+    "id": 94,
+    "quiz_id": 5,
+    "question": "Splunk Enterprise is used as a Scalable service in Splunk Cloud.",
+    "options": ["A. True", "B. False"],
+    "correct": "A"
+  },
+  {
+    "id": 95,
+    "quiz_id": 5,
+    "question": "Which component of Splunk let us write SPL query to find the required data?",
+    "options": ["A. Forwarders", "B. Indexer", "C. Heavy Forwarders", "D. Search head"],
+    "correct": "D"
+  },
+  {
+    "id": 96,
+    "quiz_id": 5,
+    "question": "All components are installed and administered in Splunk Enterprise on-premise.",
+    "options": ["A. True", "B. False"],
+    "correct": "A"
+  },
+  {
+    "id": 97,
+    "quiz_id": 5,
+    "question": "Log filtering/parsing can be done from",
+    "options": ["A. Index Forwarders (IF)", "B. Universal Forwarders (UF)", "C. Super Forwarder (SF)", "D. Heavy Forwarders (HF)"],
+    "correct": "D"
+  },
+  {
+    "id": 98,
+    "quiz_id": 5,
+    "question": "Which is the default app for Splunk Enterprise?",
+    "options": ["A. Splunk Enterprise Security Suite", "B. Searching and Reporting", "C. Reporting and Searching", "D. Splunk apps for Security"],
+    "correct": "B"
+  },
+  {
+    "id": 99,
+    "quiz_id": 5,
+    "question": "What kind of logs can Splunk Index?",
+    "options": ["A. Only A, B", "B. Router and Switch Logs", "C. Firewall and Web Server Logs", "D. Only C", "E. Database logs", "F. All firewall, web server, database, router and switch logs"],
+    "correct": "F"
+  },
+  {
+    "id": 100,
+    "quiz_id": 5,
+    "question": "Portal for Splunk apps can be accessed through www.splunkbase.com",
+    "options": ["A. False", "B. True"],
+    "correct": "B"
+  },
+  {
+    "id": 101,
+    "quiz_id": 6,
+    "question": "Splunk shows data in",
+    "options": ["A. ASCII Character order.", "B. Reverse chronological order.", "C. Alphanumeric order.", "D. Chronological order."],
+    "correct": "B"
+  },
+  {
+    "id": 102,
+    "quiz_id": 6,
+    "question": "Which of the following can be used as wildcard search in Splunk?",
+    "options": ["A. =", "B. >", "C. !", "D. *"],
+    "correct": "D"
+  },
+  {
+    "id": 103,
+    "quiz_id": 6,
+    "question": "What result will you get with following search: index=test sourcetype=\"The_Questionnaire_P*\"?",
+    "options": ["A. the questionnaire_pedia", "B. the questionnaire pedia", "C. the_questionnaire_pedia", "D. the_questionnaire Pedia"],
+    "correct": "C"
+  },
+  {
+    "id": 104,
+    "quiz_id": 6,
+    "question": "Prefix wildcards might cause performance issues.",
+    "options": ["A. False", "B. True"],
+    "correct": "B"
+  },
+  {
+    "id": 105,
+    "quiz_id": 6,
+    "question": "Machine data can be in structured and unstructured format.",
+    "options": ["A. False", "B. True"],
+    "correct": "B"
+  },
+  {
+    "id": 106,
+    "quiz_id": 6,
+    "question": "Field names are case sensitive.",
+    "options": ["A. True", "B. False"],
+    "correct": "A"
+  },
+  {
+    "id": 107,
+    "quiz_id": 6,
+    "question": "Splunk internal fields contains general information about events and starts from underscore i.e. _time.",
+    "options": ["A. True", "B. False"],
+    "correct": "A"
+  },
+  {
+    "id": 108,
+    "quiz_id": 6,
+    "question": "How many main user roles do you have in Splunk?",
+    "options": ["A. 2", "B. 4", "C. 1", "D. 3"],
+    "correct": "B"
+  },
+  {
+    "id": 109,
+    "quiz_id": 6,
+    "question": "Which of the following are Splunk premium enhanced solutions? (Choose three.)",
+    "options": ["A. Splunk User Behavior Analytics (UBA)", "B. Splunk IT Service Intelligence (ITSI)", "C. Splunk Enterprise Security (ES)", "D. Splunk Analytics Security (AS)"],
+    "correct": "ABC"
+  },
+  {
+    "id": 110,
+    "quiz_id": 6,
+    "question": "Fields are searchable name and value pairings that differentiates one event from another.",
+    "options": ["A. False", "B. True"],
+    "correct": "B"
+  },
+  {
+    "id": 111,
+    "quiz_id": 6,
+    "question": "Splunk extracts fields from event data at index time and at search time.",
+    "options": ["A. True", "B. False"],
+    "correct": "A"
+  },
+  {
+    "id": 112,
+    "quiz_id": 6,
+    "question": "Field values are case sensitive.",
+    "options": ["A. True", "B. False"],
+    "correct": "B"
+  },
+  {
+    "id": 113,
+    "quiz_id": 6,
+    "question": "Splunk indexes the data on the basis of timestamps.",
+    "options": ["A. True", "B. False"],
+    "correct": "A"
+  },
+  {
+    "id": 114,
+    "quiz_id": 6,
+    "question": "________ is the default web port used by Splunk.",
+    "options": ["A. 8089", "B. 8000", "C. 8080", "D. 443"],
+    "correct": "B"
+  },
+  {
+    "id": 115,
+    "quiz_id": 6,
+    "question": "Which of the following statements are correct about Search & Reporting App? (Choose three.)",
+    "options": ["A. Can be accessed by Apps > Search & Reporting.", "B. Provides default interface for searching and analyzing logs.", "C. Enables the user to create knowledge object, reports, alerts and dashboards.", "D. It only gives us search functionality."],
+    "correct": "ABC"
+  },
+  {
+    "id": 116,
+    "quiz_id": 6,
+    "question": "Parsing of data can happen both in HF and Indexer.",
+    "options": ["A. Only HF", "B. No", "C. Yes"],
+    "correct": "C"
+  },
+  {
+    "id": 117,
+    "quiz_id": 6,
+    "question": "Monitor option in Add Data provides",
+    "options": ["A. Only continuous monitoring.", "B. Only One-time monitoring.", "C. None of the above.", "D. Both One-time and continuous monitoring."],
+    "correct": "D"
+  },
+  {
+    "id": 118,
+    "quiz_id": 6,
+    "question": "License Meter runs before data compression.",
+    "options": ["A. No", "B. Yes"],
+    "correct": "B"
+  },
+  {
+    "id": 119,
+    "quiz_id": 6,
+    "question": "Forward Option gather and forward data to indexers over a receiving port from remote machines.",
+    "options": ["A. False", "B. True"],
+    "correct": "B"
+  },
+  {
+    "id": 120,
+    "quiz_id": 6,
+    "question": "You can on-board data to Splunk using following means (Choose four.):",
+    "options": ["A. Props", "B. CLI", "C. Splunk Web", "D. savedsearches.conf", "E. Splunk apps and add-ons", "F. indexes.conf", "G. inputs.conf", "H. metadata.conf"],
+    "correct": "BCEG"
+  },
+  {
+    "id": 121,
+    "quiz_id": 7,
+    "question": "Data sources being opened and read applies to:",
+    "options": ["A. None of the above", "B. Indexing Phase", "C. Parsing Phase", "D. Input Phase", "E. License Metering"],
+    "correct": "D"
+  },
+  {
+    "id": 122,
+    "quiz_id": 7,
+    "question": "Select the correct option that applies to Index time processing (Choose three.).",
+    "options": ["A. Indexing", "B. Searching", "C. Parsing", "D. Settings", "E. Input"],
+    "correct": "ACE"
+  },
+  {
+    "id": 123,
+    "quiz_id": 7,
+    "question": "Splunk automatically determines the source type for major data types.",
+    "options": ["A. False", "B. True"],
+    "correct": "B"
+  },
+  {
+    "id": 124,
+    "quiz_id": 7,
+    "question": "Parsing of data can happen both in HF and UF.",
+    "options": ["A. Yes", "B. No"],
+    "correct": "B"
+  },
+  {
+    "id": 125,
+    "quiz_id": 7,
+    "question": "Upload option creates inputs.conf",
+    "options": ["A. Yes", "B. No"],
+    "correct": "B"
+  },
+  {
+    "id": 126,
+    "quiz_id": 7,
+    "question": "Splunk index time process can be broken down into ________ phases.",
+    "options": ["A. 3", "B. 2", "C. 4", "D. 1"],
+    "correct": "A"
+  },
+  {
+    "id": 127,
+    "quiz_id": 7,
+    "question": "In monitor option you can select the following options in GUI.",
+    "options": ["A. Only HTTP Event Collector (HEC) and TCP/UDP", "B. None of the above", "C. Only TCP/UDP", "D. Only Scripts", "E. Field & Directories, HTTP Event Collector (HEC), TCP/UDP and Scripts"],
+    "correct": "E"
+  },
+  {
+    "id": 128,
+    "quiz_id": 7,
+    "question": "Uploading local files though Upload options index the file only once.",
+    "options": ["A. No", "B. Yes"],
+    "correct": "B"
+  },
+  {
+    "id": 129,
+    "quiz_id": 7,
+    "question": "Which of the statements are correct about HF? (Choose three.)",
+    "options": ["A. Parsing", "B. Masking", "C. Searching", "D. Forwarding"],
+    "correct": "ABD"
+  },
+  {
+    "id": 130,
+    "quiz_id": 7,
+    "question": "Where does Licensing meter happen?",
+    "options": ["A. Indexer", "B. Parsing", "C. Heavy Forwarder", "D. Input"],
+    "correct": "A"
+  },
+  {
+    "id": 131,
+    "quiz_id": 7,
+    "question": "Matching search terms are highlighted.",
+    "options": ["A. Yes", "B. No"],
+    "correct": "A"
+  },
+  {
+    "id": 132,
+    "quiz_id": 7,
+    "question": "Beginning parentheses is automatically highlighted to guide you on the presence of complimenting parentheses.",
+    "options": ["A. No", "B. Yes"],
+    "correct": "B"
+  },
+  {
+    "id": 133,
+    "quiz_id": 7,
+    "question": "Zoom Out and Zoom to Selection re-executes the search.",
+    "options": ["A. No", "B. Yes"],
+    "correct": "B"
+  },
+  {
+    "id": 134,
+    "quiz_id": 7,
+    "question": "Every Search in Splunk is also called",
+    "options": ["A. None of the above", "B. Job", "C. Search Only"],
+    "correct": "B"
+  },
+  {
+    "id": 135,
+    "quiz_id": 7,
+    "question": "Matching of parentheses is a feature of Splunk Assistant.",
+    "options": ["A. No", "B. Yes"],
+    "correct": "A"
+  },
+  {
+    "id": 136,
+    "quiz_id": 7,
+    "question": "Search Assistant is enabled by default in the SPL editor with compact settings.",
+    "options": ["A. No", "B. Yes"],
+    "correct": "B"
+  },
+  {
+    "id": 137,
+    "quiz_id": 7,
+    "question": "What is Search Assistant in Splunk?",
+    "options": ["A. It is only available to Admins.", "B. Such feature does not exist in Splunk.", "C. Shows options to complete the search string."],
+    "correct": "C"
+  },
+  {
+    "id": 138,
+    "quiz_id": 7,
+    "question": "@ Symbol can be used in advanced time unit option.",
+    "options": ["A. No", "B. Yes"],
+    "correct": "B"
+  },
+  {
+    "id": 139,
+    "quiz_id": 7,
+    "question": "The new data uploaded in Splunk are shown in",
+    "options": ["A. Real-time", "B. 10 Minutes", "C. Overnight Download", "D. 30 Minutes"],
+    "correct": "A"
+  },
+  {
+    "id": 140,
+    "quiz_id": 7,
+    "question": "You can use the following options to specify start and end time for the query range:",
+    "options": ["A. earliest=", "B. latest=", "C. beginning=", "D. ending=", "E. All the above", "F. Only 1st and 2nd"],
+    "correct": "F"
+  },
+  {
+    "id": 141,
+    "quiz_id": 8,
+    "question": "You can change the App context in Input setting.",
+    "options": ["A. No", "B. Yes"],
+    "correct": "B"
+  },
+  {
+    "id": 142,
+    "quiz_id": 8,
+    "question": "The default host name used in Inputs general settings can not be changed.",
+    "options": ["A. False", "B. True"],
+    "correct": "A"
+  },
+  {
+    "id": 143,
+    "quiz_id": 8,
+    "question": "Events in Splunk are automatically segregated using data and time.",
+    "options": ["A. Yes", "B. No"],
+    "correct": "A"
+  },
+  {
+    "id": 144,
+    "quiz_id": 8,
+    "question": "You are able to create new Index in Data Input settings.",
+    "options": ["A. No", "B. Yes"],
+    "correct": "B"
+  },
+  {
+    "id": 145,
+    "quiz_id": 8,
+    "question": "Splunk Parses data into individual events, extracts time, and assigns metadata.",
+    "options": ["A. False", "B. True"],
+    "correct": "B"
+  },
+  {
+    "id": 146,
+    "quiz_id": 8,
+    "question": "Which of the statements is correct regarding click and drag option in timeline?",
+    "options": ["A. The new result after selecting the range by dragging filters the events and displays the most recent first.", "B. There is no functionality like click and drag in Splunk's timeline.", "C. Using this option executes a new query.", "D. This doesn't execute a new query."],
+    "correct": "D"
+  },
+  {
+    "id": 147,
+    "quiz_id": 8,
+    "question": "Which symbol is used to snap the time?",
+    "options": ["A. @", "B. &", "C. *", "D. #"],
+    "correct": "A"
+  },
+  {
+    "id": 148,
+    "quiz_id": 8,
+    "question": "Which of the statements are correct? (Choose three.)",
+    "options": ["A. Zoom to selection: Narrows the time range and re-executes the search.", "B. Zoom to selection: Narrows the time range and doesn't re-executes the search.", "C. Format Timeline: Hides or shows the timeline in different views.", "D. Zoom-Out: Expands the time focus and doesn't re-executes the search.", "E. Zoom-out: Expands the time focus and re-executes the search."],
+    "correct": "ACE"
+  },
+  {
+    "id": 149,
+    "quiz_id": 8,
+    "question": "There are three different search modes in Splunk (Choose three.):",
+    "options": ["A. Automatic", "B. Smart", "C. Fast", "D. Verbose"],
+    "correct": "BCD"
+  },
+  {
+    "id": 150,
+    "quiz_id": 8,
+    "question": "Select the statements that are true for timeline in Splunk (Choose four.):",
+    "options": ["A. Timeline shows distribution of events specified in the time range in the form of bars.", "B. Single click to see the result for particular time period.", "C. You can click and drag across the bar for selecting the range.", "D. This is default view and you can't make any changes to it.", "E. You can hover your mouse for details like total events, time and date."],
+    "correct": "ABCE"
+  },
+  {
+    "id": 151,
+    "quiz_id": 8,
+    "question": "Keywords are highlighted when you mouse over search results and you can click this search result to (Choose three.):",
+    "options": ["A. Open new search.", "B. Exclude the item from search.", "C. None of the above.", "D. Add the item to search."],
+    "correct": "ABD"
+  },
+  {
+    "id": 152,
+    "quiz_id": 8,
+    "question": "You can view the search result in following format (Choose three.):",
+    "options": ["A. Table", "B. Raw", "C. Pie Chart", "D. List"],
+    "correct": "ABD"
+  },
+  {
+    "id": 153,
+    "quiz_id": 8,
+    "question": "Snapping rounds down to the nearest specified unit.",
+    "options": ["A. Yes", "B. No"],
+    "correct": "A"
+  },
+  {
+    "id": 154,
+    "quiz_id": 8,
+    "question": "Data summary button just below the search bar gives you the following (Choose three.):",
+    "options": ["A. Hosts", "B. Sourcetypes", "C. Sources", "D. Indexes"],
+    "correct": "ABC"
+  },
+  {
+    "id": 155,
+    "quiz_id": 8,
+    "question": "What options do you get after selecting timeline? (Choose four.)",
+    "options": ["A. Zoom to selection", "B. Format Timeline", "C. Deselect", "D. Delete", "E. Zoom Out"],
+    "correct": "ABCE"
+  },
+  {
+    "id": 156,
+    "quiz_id": 8,
+    "question": "At the time of searching the start time is 03:35:08. Will it look back to 03:00:00 if we use -30m@h in searching?",
+    "options": ["A. Yes", "B. No"],
+    "correct": "A"
+  },
+  {
+    "id": 157,
+    "quiz_id": 8,
+    "question": "Can you stop or pause the searching?",
+    "options": ["A. No", "B. Yes"],
+    "correct": "B"
+  },
+  {
+    "id": 158,
+    "quiz_id": 8,
+    "question": "You can also specify a time range in the search bar. You can use the following for beginning and ending for a time range (Choose two.):",
+    "options": ["A. Not possible to specify time manually in Search query", "B. end=", "C. start=", "D. earliest=", "E. latest="],
+    "correct": "DE"
+  },
+  {
+    "id": 159,
+    "quiz_id": 8,
+    "question": "Which all time unit abbreviations can you include in Advanced time range picker? (Choose seven.)",
+    "options": ["A. h", "B. day", "C. mon", "D. yr", "E. y", "F. w", "G. week", "H. d", "I. s", "J. m"],
+    "correct": "ACEFHIJ"
+  },
+  {
+    "id": 160,
+    "quiz_id": 8,
+    "question": "Interesting fields are the fields that have at least 20% of resulting fields.",
+    "options": ["A. True", "B. False"],
+    "correct": "A"
+  },
+  {
+    "id": 161,
+    "quiz_id": 9,
+    "question": "How to make Interesting field into a selected field?",
+    "options": ["A. Click field in field sidebar -> click YES on the pop-up dialog on upper right side -> check now field should be visible in the list of selected fields.", "B. Not possible.", "C. Only CLI changes will enable it.", "D. Click Settings -> Find field option -> Drop down select field -> enable selected field -> check now field should be visible in the list of selected fields."],
+    "correct": "A"
+  },
+  {
+    "id": 162,
+    "quiz_id": 9,
+    "question": "Field names are case sensitive and field value are not.",
+    "options": ["A. True", "B. False"],
+    "correct": "A"
+  },
+  {
+    "id": 163,
+    "quiz_id": 9,
+    "question": "NOT and ! are same arguments.",
+    "options": ["A. True", "B. False"],
+    "correct": "B"
+  },
+  {
+    "id": 164,
+    "quiz_id": 9,
+    "question": "Query: status!=100",
+    "options": ["A. Will return event where status field exist but value of that field is not 100.", "B. Will return event where status field exist but value of that field is not 100 and all events where status field doesn't exist.", "C. Will get different results depending on data."],
+    "correct": "A"
+  },
+  {
+    "id": 165,
+    "quiz_id": 9,
+    "question": "NOT status=100:",
+    "options": ["A. Will display result depending on the data.", "B. Will return event where status field exist but value of that field is not 100.", "C. Will return event where status field exist but value of that field is not 100 and all events where status field doesn't exist."],
+    "correct": "C"
+  },
+  {
+    "id": 166,
+    "quiz_id": 9,
+    "question": "Will the queries following below get the same result? 1. index=log sourcetype=error_log status!=100 2. index=log sourcetype=error_log NOT status=100",
+    "options": ["A. Yes", "B. No"],
+    "correct": "B"
+  },
+  {
+    "id": 167,
+    "quiz_id": 9,
+    "question": "Select the best options for \"search best practices\" in Splunk: (Choose five.)",
+    "options": ["A. Select the time range always.", "B. Try to specify index values.", "C. Include as many search terms as possible.", "D. Never select time range.", "E. Try to use * with every search term.", "F. Inclusion is generally better than exclusion.", "G. Try to keep specific search terms."],
+    "correct": "ABCFG"
+  },
+  {
+    "id": 168,
+    "quiz_id": 9,
+    "question": "The better way of writing search query for index is:",
+    "options": ["A. index a index=b", "B. (index=a OR index=b)", "C. index=(a & b)", "D. index=a,b"],
+    "correct": "B"
+  },
+  {
+    "id": 169,
+    "quiz_id": 9,
+    "question": "Put query into separate lines where | (Pipes) are used by selecting following options.",
+    "options": ["A. CTRL + Enter", "B. Shift + Enter", "C. Space + Enter", "D. ALT + Enter"],
+    "correct": "B"
+  },
+  {
+    "id": 170,
+    "quiz_id": 9,
+    "question": "Fields are searchable key value pairs in your event data.",
+    "options": ["A. True", "B. False"],
+    "correct": "A"
+  },
+  {
+    "id": 171,
+    "quiz_id": 9,
+    "question": "Selected fields are a set of configurable fields displayed for each event.",
+    "options": ["A. True", "B. False"],
+    "correct": "A"
+  },
+  {
+    "id": 172,
+    "quiz_id": 9,
+    "question": "Following are the time selection option while making search: (Choose all that apply.)",
+    "options": ["A. Date & Time Range", "B. Advanced", "C. Date Range", "D. Presets", "E. Relative"],
+    "correct": "ABCDE"
+  },
+  {
+    "id": 173,
+    "quiz_id": 9,
+    "question": "Search Language Syntax in Splunk can be broken down into the following components. (Choose all that apply.)",
+    "options": ["A. Search term", "B. Command", "C. Pipe", "D. Functions", "E. Arguments", "F. Clause"],
+    "correct": "ABCDEF"
+  },
+  {
+    "id": 174,
+    "quiz_id": 9,
+    "question": "When saving a search directly to a dashboard panel instead of saving as a report first, which of the following is created?",
+    "options": ["A. Cloned panel", "B. Inline panel", "C. Report panel", "D. Prebuilt panel"],
+    "correct": "B"
+  },
+  {
+    "id": 175,
+    "quiz_id": 9,
+    "question": "Which of the following statements describes a search job?",
+    "options": ["A. Once a search job begins, it cannot be stopped", "B. A search job can only be paused when less than 50% of events are returned", "C. A search job can only be stopped when less than 50% of events are returned", "D. Once a search job begins, it can be stopped or paused at any point in time"],
+    "correct": "D"
+  },
+  {
+    "id": 176,
+    "quiz_id": 9,
+    "question": "Which search will return only events containing the word error and display the results as a table that includes the fields named action, src, and dest?",
+    "options": ["A. error | table action, src, dest", "B. error | tabular action, src, dest", "C. error | stats table action, src, dest", "D. error table column action column src column dest"],
+    "correct": "A"
+  },
+  {
+    "id": 177,
+    "quiz_id": 9,
+    "question": "Which of the following reports is available in the Fields window?",
+    "options": ["A. Top values by time", "B. Rare values by time", "C. Events with top value fields", "D. Events with rare value fields"],
+    "correct": "A"
+  },
+  {
+    "id": 178,
+    "quiz_id": 9,
+    "question": "In the Search and Reporting app, which tab displays timecharts and bar charts?",
+    "options": ["A. Events", "B. Patterns", "C. Statistics", "D. Visualization"],
+    "correct": "D"
+  },
+  {
+    "id": 179,
+    "quiz_id": 9,
+    "question": "What will always appear in the Selected Fields list?",
+    "options": ["A. index", "B. action", "C. clientip", "D. sourcetype"],
+    "correct": "D"
+  },
+  {
+    "id": 180,
+    "quiz_id": 9,
+    "question": "What is the correct way to use a time range specifier in the search bar so that the search looks back 2 hours?",
+    "options": ["A. latest=-2h", "B. earliest=-2h", "C. latest=-2hour@d", "D. earliest 2hour@d"],
+    "correct": "B"
+  },
+  {
+    "id": 181,
+    "quiz_id": 10,
+    "question": "Which of the following is a Splunk internal field?",
+    "options": ["A. _raw", "B. host", "C. host_id", "D. index_name"],
+    "correct": "A"
+  },
+  {
+    "id": 182,
+    "quiz_id": 10,
+    "question": "Which command will rename action to Customer Action?",
+    "options": ["A. rename action = CustomerAction", "B. rename Action as Customer Action", "C. rename Action to Customer Action", "D. | rename action as \"Customer Action\""],
+    "correct": "D"
+  },
+  {
+    "id": 183,
+    "quiz_id": 10,
+    "question": "Which of the following is the most efficient search?",
+    "options": ["A. index=* failed password", "B. failed password index=*", "C. (index=* OR index=security) failed password", "D. index=security \"failed password\""],
+    "correct": "D"
+  },
+  {
+    "id": 184,
+    "quiz_id": 10,
+    "question": "Which of the following is a correct way to limit search results to display the 5 most common values of a field?",
+    "options": ["A. rare top=5", "B. | top rare=5", "C. | top limit=5", "D. | rare limit=5"],
+    "correct": "C"
+  },
+  {
+    "id": 185,
+    "quiz_id": 10,
+    "question": "When viewing results of a search job from the Activity menu, which of the following is displayed?",
+    "options": ["A. New events based on the current time range picker", "B. The same events based on the current time range picker", "C. The same events from when the original search was executed", "D. New events in addition to the same events from the original search"],
+    "correct": "C"
+  },
+  {
+    "id": 186,
+    "quiz_id": 10,
+    "question": "What is a quick, comprehensive way to learn what data is present in a Splunk deployment?",
+    "options": ["A. Review Splunk reports", "B. Run ./splunk show", "C. Click Data Summary in Splunk Web", "D. Search index=* sourcetype=* host=*"],
+    "correct": "C"
+  },
+  {
+    "id": 187,
+    "quiz_id": 10,
+    "question": "Assuming a user has the capability to edit reports, which of the following are editable?",
+    "options": ["A. Acceleration, schedule, permissions", "B. The report's name, schedule, permissions", "C. The report's name, acceleration, schedule", "D. The report's name, acceleration, permissions"],
+    "correct": "A"
+  },
+  {
+    "id": 188,
+    "quiz_id": 10,
+    "question": "Which of the following is a metadata field assigned to every event in Splunk?",
+    "options": ["A. host", "B. owner", "C. bytes", "D. action"],
+    "correct": "A"
+  },
+  {
+    "id": 189,
+    "quiz_id": 10,
+    "question": "What are the two most efficient search filters?",
+    "options": ["A. time and host", "B. time and index", "C. host and sourcetype", "D. index and sourcetype"],
+    "correct": "B"
+  },
+  {
+    "id": 190,
+    "quiz_id": 10,
+    "question": "Which of the following is the best way to create a report that shows the last 24 hours of events?",
+    "options": ["A. Use earliest=-1d@d latest=@d", "B. Set a real-time search over a 24-hour window", "C. Use the time range picker to select Yesterday", "D. Use the time range picker to select Last 24 hours"],
+    "correct": "D"
+  },
+  {
+    "id": 191,
+    "quiz_id": 10,
+    "question": "When is the pipe character, |, used in search strings?",
+    "options": ["A. Before clauses. For example: stats sum(bytes) | by host", "B. Before commands. For example: | stats sum(bytes) by host", "C. Before arguments. For example: stats sum(bytes) by host", "D. Before functions. For example: stats | sum(bytes) by host"],
+    "correct": "B"
+  },
+  {
+    "id": 192,
+    "quiz_id": 10,
+    "question": "How can results from a specified static lookup file be displayed?",
+    "options": ["A. lookup command", "B. inputlookup command", "C. Settings > Lookups > Input", "D. Settings > Lookups > Upload"],
+    "correct": "B"
+  },
+  {
+    "id": 193,
+    "quiz_id": 10,
+    "question": "In the Fields sidebar, what does the number directly to the right of the field name indicate?",
+    "options": ["A. The value of the field", "B. The number of values for the field", "C. The number of unique values for the field", "D. The numeric non-unique values of the field"],
+    "correct": "C"
+  },
+  {
+    "id": 194,
+    "quiz_id": 10,
+    "question": "What is the default lifetime of every Splunk search job?",
+    "options": ["A. All search jobs are saved for 10 days", "B. All search jobs are saved for 10 hours", "C. All search jobs are saved for 10 weeks", "D. All search jobs are saved for 10 minutes"],
+    "correct": "D"
+  },
+  {
+    "id": 195,
+    "quiz_id": 10,
+    "question": "Which search will return the 15 least common field values for the destip field?",
+    "options": ["A. sourcetype=firewall | rare num=15 dest_ip", "B. sourcetype=firewall | rare last=15 dest_ip", "C. sourcetype=firewall | rare count=15 dest_ip", "D. sourcetype=firewall | rare limit=15 dest_ip"],
+    "correct": "D"
+  },
+  {
+    "id": 196,
+    "quiz_id": 10,
+    "question": "When is an alert triggered?",
+    "options": ["A. When Splunk encounters a syntax error in a search", "B. When a trigger action meets the predefined conditions", "C. When an event in a search matches up with a data model", "D. When results of a search meet a specifically defined condition"],
+    "correct": "D"
+  },
+  {
+    "id": 197,
+    "quiz_id": 10,
+    "question": "What are the three main Splunk components?",
+    "options": ["A. Search head, GPU, streamer", "B. Search head, indexer, forwarder", "C. Search head, SQL database, forwarder", "D. Search head, SSD, heavy weight agent"],
+    "correct": "B"
+  },
+  {
+    "id": 198,
+    "quiz_id": 10,
+    "question": "Which statement describes field discovery at search time?",
+    "options": ["A. Splunk automatically discovers only numeric fields", "B. Splunk automatically discovers only alphanumeric fields", "C. Splunk automatically discovers only manually configured fields.", "D. Splunk automatically discovers only fields directly related to the search results"],
+    "correct": "D"
+  },
+  {
+    "id": 199,
+    "quiz_id": 10,
+    "question": "Which Field/Value pair will return only events found in the index named security?",
+    "options": ["A. Index Security", "B. index=security", "C. Index security", "D. index!=Security"],
+    "correct": "B"
+  },
+  {
+    "id": 200,
+    "quiz_id": 10,
+    "question": "In the Search and Reporting app, which is a default selected field?",
+    "options": ["A. index", "B. host", "C. _time", "D. action"],
+    "correct": "B"
+  },
+  {
+    "id": 201,
+    "quiz_id": 11,
+    "question": "The four types of Lookups that Splunk provides out-of-the-box are External, KV Store, Geospatial and which of the following?",
+    "options": ["A. Correlated", "B. Total", "C. Segmented", "D. File-based"],
+    "correct": "D"
+  },
+  {
+    "id": 202,
+    "quiz_id": 11,
+    "question": "What is the result of the following search? index=myindex source=c:\\mydata.txt NOT error=*",
+    "options": ["A. Only data where the value of the field error does not equal an asterisk (*) will be displayed.", "B. Only data that does not contain the error field will be displayed.", "C. Only data with a value in the field error will be displayed.", "D. Only data where the error field is present and does not contain a value will be displayed."],
+    "correct": "B"
+  },
+  {
+    "id": 203,
+    "quiz_id": 11,
+    "question": "When refining search results, what is the difference in the time picker between real-time and relative time ranges?",
+    "options": ["A. Real-time searches display results from a rolling time window, while relative searches display results from a set length of time.", "B. Real-time searches happen instantly, while relative searches happen at a scheduled time.", "C. Real-time represents events that have happened in a set time window, while relative will display results from a rolling time window.", "D. Real-time searches run constantly in the background, while relative searches only run when certain criteria are met."],
+    "correct": "A"
+  },
+  {
+    "id": 204,
+    "quiz_id": 11,
+    "question": "A SOC manager is complaining that a scheduled alert for failed login attempts triggered 150 emails. They still want to be alerted of failed logins via email, but they want less volume of alerts. Which of the following would resolve this for the SOC manager?",
+    "options": ["A. Change the schedule so the alert runs more frequently.", "B. Disable the alert entirely.", "C. Change the trigger from \"For each result\" to \"Once\".", "D. Change the alert action from email to webhook."],
+    "correct": "C"
+  },
+  {
+    "id": 205,
+    "quiz_id": 11,
+    "question": "By default, which role contains the minimum permissions required to have write access to Splunk alerts?",
+    "options": ["A. Alerting", "B. Admin", "C. Power", "D. User"],
+    "correct": "C"
+  },
+  {
+    "id": 206,
+    "quiz_id": 11,
+    "question": "Which of the following is the appropriately formatted SPL search?",
+    "options": ["A. index security sourcetype=linux_secure (invalid OR failed) | count as \"Potential Issues\"", "B. index=security sourcetype=linux_secure (invalid OR failed) | stats count as \"Potential Issues\"", "C. index security sourcetype=linux_secure (invalid OR failed) | count stats as \"Potential Issues\"", "D. index=security sourcetype linux_secure (invalid OR failed) | stats as \"Potential Issues\""],
+    "correct": "B"
+  },
+  {
+    "id": 207,
+    "quiz_id": 11,
+    "question": "When using the top command in the following search, which of the following will be true about the results? index=\"main\" sourcetype=\"access_\" action=\"purchase\" | top 3 statusCode by user showperc=f countfield=status_code_count",
+    "options": ["A. The percentage field will be displayed in the results.", "B. The top three most common values in statusCode will be displayed for each user.", "C. The search will fail. The proper top command format is top limit=3 instead of top 3.", "D. Only the top three overall most common values in statusCode will be displayed."],
+    "correct": "B"
+  },
+  {
+    "id": 208,
+    "quiz_id": 11,
+    "question": "What steps do you need to take in order to be able to create a report with line chart content?",
+    "options": ["A. 1. Create a search, 2. Select the Visualization tab, 3. Click Save As > Report, 4. Select a Line Chart as the content", "B. 1. Create a search, 2. Select the Visualization tab, 3. Click Save As > Dashboard Panel, 4. Select a Line Chart as the Panel Content", "C. 1. Create a search, 2. Click the Events Tab, 3. Click Save As > Report, 4. Select a Line Chart as the content", "D. 1. Create a search, 2. Select the Statistics tab, 3. Click Save As > Report, 4. Select a Line Chart as the content"],
+    "correct": "A"
+  },
+  {
+    "id": 209,
+    "quiz_id": 11,
+    "question": "What are Splunk alerts based on?",
+    "options": ["A. Dashboards", "B. Webhooks", "C. Searches", "D. Reports"],
+    "correct": "C"
+  },
+  {
+    "id": 210,
+    "quiz_id": 11,
+    "question": "Which of the following need to be specified when utilizing the lookup command in search?",
+    "options": ["A. Host and field", "B. Table name and clause", "C. Table name and field", "D. Table name and host"],
+    "correct": "C"
+  },
+  {
+    "id": 211,
+    "quiz_id": 11,
+    "question": "What is the proper SPL terminology for specifying a particular index in a search?",
+    "options": ["A. index name index_name", "B. indexer name=index_name", "C. indexer index_name", "D. index=index_name"],
+    "correct": "D"
+  },
+  {
+    "id": 212,
+    "quiz_id": 11,
+    "question": "In the Splunk web interface, what defines an interesting field?",
+    "options": ["A. The field with the lowest entropy relative to the core search.", "B. The field that exists in at least twenty percent (20%) of the events in the search.", "C. The numeric field within the data, which allows its use in charts and timecharts.", "D. The field with the highest entropy relative to the core search."],
+    "correct": "B"
+  }
+]
